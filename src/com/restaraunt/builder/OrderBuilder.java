@@ -1,4 +1,4 @@
-package com.restaurant.order;
+package com.restaraunt.builder;
 
 public interface OrderBuilder {
     OrderBuilder setMainDish(String mainDish);

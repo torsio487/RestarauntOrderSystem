@@ -1,4 +1,4 @@
-package com.restaurant.order;
+package com.restaraunt.builder;
 
 public class RestarauntOrderBuilder implements OrderBuilder {
     private String mainDish;
