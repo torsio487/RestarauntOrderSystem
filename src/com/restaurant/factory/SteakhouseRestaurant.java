@@ -2,7 +2,12 @@ package com.restaurant.factory;
 
 public class SteakhouseRestaurant extends Restaurant {
     @Override
-    protected Meal createMeal() {
+    public Meal createMeal() {
         return new SteakMeal();
+    }
+
+    @Override
+    public Drink createDrink() {
+        return new SteakComboDrink();
     }
 }

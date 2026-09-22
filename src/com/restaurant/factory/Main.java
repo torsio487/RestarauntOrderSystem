@@ -2,11 +2,22 @@ package com.restaurant.factory;
 
 public class Main {
     public static void main(String[] args) {
-        // Client works only with abstract method Creator
-        Restaurant myVeganPlace = new VeganRestaurant();
-        myVeganPlace.orderMeal();
+        System.out.println("--- Vegan Order ---");
+        Restaurant veganFactory = new VeganRestaurant();
+        Meal veganMeal = veganFactory.createMeal();
+        Drink veganDrink = veganFactory.createDrink();
 
-        Restaurant mySteakhouse = new SteakhouseRestaurant();
-        mySteakhouse.orderMeal();
+        veganMeal.prepare();
+        veganMeal.serve();
+        veganDrink.serve();
+
+        System.out.println("\n--- Steakhouse Order ---");
+        Restaurant steakFactory = new SteakhouseRestaurant();
+        Meal steakMeal = steakFactory.createMeal();
+        Drink steakDrink = steakFactory.createDrink();
+
+        steakMeal.prepare();
+        steakMeal.serve();
+        steakDrink.serve();
     }
 }
