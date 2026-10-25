@@ -1,5 +1,6 @@
 package com.restaurant.strategy;
 
+
 public class OrderContext {
     private final String orderId;
     private final double rawTotal;
